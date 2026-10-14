@@ -1,10 +1,11 @@
 import time
 
 class Potion:
-    def __init__(self, name, effect, number):
+    def __init__(self, name, effect, initial_number, restore_amount):
         self.name = name
         self.effect = effect
-        self.number = number
+        self.number = initial_number
+        self.restore_amount = restore_amount
 
     def use(self):
         if self.number > 0:
