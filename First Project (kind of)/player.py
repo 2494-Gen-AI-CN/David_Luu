@@ -14,7 +14,7 @@ class Player:
             print(f"{self.name} has no {potion.name}s left!\n")
             time.sleep(1)
 
-    def attack(self, monster):
+    def attack(self):
         print(f"{self.name} attacks {monster.name}!")
         time.sleep(1)
         damage = random.randint(5, 10)
@@ -22,7 +22,7 @@ class Player:
         print(f"{monster.name} takes {damage} damage and now has {monster.health} health.\n")
         time.sleep(1)
 
-    def cast_spell(self, spell):
+    def cast_spell(self):
         if self.mana >= spell.cost:
             self.mana -= spell.cost
         else:

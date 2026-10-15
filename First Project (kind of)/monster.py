@@ -5,7 +5,7 @@ class Monster:
         self.name = name
         self.health = 200
 
-    def attack(self, player):
+    def attack(self):
         print(f"{self.name} attacks {player.name}!\n")
         time.sleep(1)
         damage = random.randint(10, 20)
