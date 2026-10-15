@@ -4,8 +4,10 @@ You have a sword, spells, and potions. You can attack, cast spells, or restore h
 
 Be careful, this monster is no walk in the park.
 
-Use the onscreen commands to make a selection on your action.
+Use the onscreen commands to make a selection on your next action.
 
 Strategize your next actions carefully. Balance on attacking and healing.
 
 Your next move could be your last. Slay the beast to claim victory.
+
+Or else the kingdom will be lost.
