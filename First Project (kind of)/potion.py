@@ -7,13 +7,10 @@ class Potion:
         self.number = initial_number
         self.restore_amount = restore_amount
 
-    def use(self):
-        if self.number > 0:
-            self.number -= 1
-            print(f"You used the {self.name}. {self.effect}")
-            time.sleep(1)
-            return
-        else:
-            print(f"You are out of {self.name}s.")
-            time.sleep(1)
-            return
+class HealthPotion(Potion):
+    def __init__(self):
+        super().__init__("Health Potion", "Restores 20 health.", 3, 20)
+
+class ManaPotion(Potion):
+    def __init__(self):
+        super().__init__("Mana Potion", "Restores 10 mana.", 3, 10)
