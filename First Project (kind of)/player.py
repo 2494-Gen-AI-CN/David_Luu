@@ -7,7 +7,7 @@ class Player:
         self.mana = 50
         self.potions = [potion.HealthPotion(), potion.ManaPotion()]
 
-    def use_potion(self, potion):
+    def use_potion(self):
         if potion.number > 0:
             potion.number -= 1
         else:
