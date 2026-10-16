@@ -23,7 +23,7 @@ class Fireball(Spell):
     damage = 10
 
     def __init__(self):
-        super().__init__("Fireball", "A ball of fire that burns the enemy for 10 damage.", 20)
+        super().__init__("Fireball", "A ball of fire that burns the enemy for 10 damage.", 15)
 
     def apply(self, player, monster):
         monster.health -= self.damage
