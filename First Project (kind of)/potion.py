@@ -17,6 +17,10 @@ class HealthPotion(Potion):
 
         else:
             player.health += self.restore_amount
+
+            if (player.health > 100):
+                player.health = 100
+            
             print(f"{player.name} restored {self.restore_amount} health!\n")
 
         time.sleep(3)
@@ -31,6 +35,10 @@ class ManaPotion(Potion):
 
         else:
             player.mana += self.restore_amount
+            
+            if (player.mana > 50):
+                player.mana = 50
+            
             print(f"{player.name} restored {self.restore_amount} mana!\n")
 
         time.sleep(3)
