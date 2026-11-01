@@ -59,7 +59,7 @@ SELECT CustomerId, COUNT(InvoiceId), SUM(Total) FROM Invoice GROUP BY CustomerId
 -- ============================================================
 
 -- Q12. Every album title with the name of its artist, sorted by artist then title.
-
+SELECT art.Name, alb.Title FROM Artist AS art JOIN Album AS alb ON art.ArtistId = alb.ArtistId ORDER BY art.Name, alb.Title;
 
 -- Q13. Q10 again, with the album title and the artist name instead of the id.
 
