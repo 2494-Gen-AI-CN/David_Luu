@@ -37,22 +37,22 @@ NOT NULL AND COUNTRY IN ('USA', 'Canada') ORDER BY Company;
 
 -- Q07. One row about the whole Track table: how many tracks, and the shortest, longest
 --      and average length in minutes (two decimals).
-
+SELECT COUNT(TrackId), ROUND(MIN(Milliseconds)/60000, 2), ROUND(MAX(Milliseconds)/60000, 2), ROUND(AVG(Milliseconds)/60000, 2) FROM Track;
 
 -- Q08. How many customers live in each country, most customers first, then country A to Z.
-
+SELECT COUNT(CustomerId), Country FROM Customer GROUP BY Country ORDER BY COUNT(CustomerId) DESC, Country;
 
 -- Q09. Total billed per billing country (two decimals), only the countries billed more
 --      than 100 in all, highest first.
-
+SELECT BillingCountry, SUM(Total) FROM Invoice GROUP BY BillingCountry HAVING SUM(TOTAL) > 100 ORDER BY SUM(Total) DESC;
 
 -- Q10. Albums with more than 25 tracks: the album id and its track count, most tracks first.
 --      (Only the id for now. Q13 adds the title.)
-
+SELECT AlbumId, SUM(TrackId) FROM Track GROUP BY AlbumId HAVING COUNT(TrackId) > 25 ORDER BY SUM(TrackId) DESC;
 
 -- Q11. Per customer id: how many invoices and how much they spent in all (two decimals),
 --      only the customers who spent more than 45, biggest spender first.
-
+SELECT CustomerId, COUNT(InvoiceId), SUM(Total) FROM Invoice GROUP BY CustomerId HAVING SUM(Total) > 45 ORDER BY SUM(Total) DESC;
 
 -- ============================================================
 -- Part C: joins
